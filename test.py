@@ -1,13 +1,8 @@
 
-dict_ = {}
-for i in range(10):
-	dict_[str(i)] = i
+lst = [-1, 2, 1, 2, 3]
 
-# dict_['7'] = 8
-last_v = -1
+res = [i == lst[lst.index(i) + 1] + 1 for i in lst[:-1]]
+print(res)
 
-for k, v in dict_.items():
-	if v != last_v + 1:
-		print('Alarm !!!!', k, v)
-	last_v = v
-	
+# print(lst[lst.index(-1)])
+print(lst[lst.index(-1) + 1])
