@@ -3,11 +3,13 @@ dict_ = {}
 for i in range(10):
 	dict_[str(i)] = i
 
-dict_['7'] = 8
+# dict_['7'] = 8
+last_v = 0
 
 for k, v in dict_.items():
-	if v == 9:
+	if last_v == 0:
 		continue
-	if v + 1 != dict_[str(v + 1)]:
-		print('Alarm !!!!')
+	if v != last_v + 1:
+		print('Alarm !!!!', k, v)
+	last_v = v
 	
