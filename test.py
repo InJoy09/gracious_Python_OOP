@@ -1,8 +1,6 @@
 
-s = 'recede'
-res = ''
-for ch in s:
-	res += '(' if s.count(ch) == 1 else ')'
-	
-print(res)
-
+s = "    Hello     world   ".split()
+h = '#'
+for el in s:
+	h += el.title()
+res = False if len(h) > 140 or h == '#' else h
