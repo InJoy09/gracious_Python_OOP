@@ -1,6 +1,17 @@
 
-s = "    Hello     world   ".split()
-h = '#'
-for el in s:
-	h += el.title()
-res = False if len(h) > 140 or h == '#' else h
+s = 'двести сорок шесть'
+s = 'сорок шесть'
+q = s.split()
+res = 0
+
+lst1 = ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять']
+lst2 = ['', 'десять', 'двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто']
+
+for el in q:
+	if el in lst2:
+		res += lst2.index(el) * 10
+	elif el in lst1:
+		res += lst1.index(el)
+		
+print(res)
+
