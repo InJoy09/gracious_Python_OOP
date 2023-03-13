@@ -18,6 +18,7 @@ for el in q:
 	elif el in lst2:
 		res += lst2.index(el) + 10
 		
-		
 print(res)
 
+z = 'три тысячи девятьсот девятнадцать'.split('тысяч')
+print(z)
