@@ -3,8 +3,7 @@ n = 70304
 n_lst = list(str(n))
 print(n_lst)
 res = ''
-for i in range(len(n_lst)):
-	el = n_lst[i]
-	if el != '0':
-		res += el + ('0' * len(n_lst[i + 1:])) + ' + '
+for ch in n_lst:
+	if ch != '0':
+		res += ch + ((len(n_lst) - n_lst.index(ch) - 1) * '0') + ' + '
 print(res[:-2])
