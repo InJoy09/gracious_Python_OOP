@@ -32,7 +32,7 @@ else:
 	x = s.split()
 	result = calculate_num(x)
 	
-	print(result)
+print(result)
 
 
 
