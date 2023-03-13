@@ -20,17 +20,20 @@ def calculate_num(q):
 	return res
 
 
-# s = 'двести сорок шесть'
 s = 'двадцать три тысячи девятьсот девятнадцать'
+s = 'двести сорок шесть'
+s = 'двадцать три тысячи девятнадцать'
+result = 0
 
 if 'тысяч' in s:
 	x = s.split('тысяч')
 	z1 = x[0].split()
 	z2 = x[1].split()
-	result = calculate_num(z1) * 1000 + calculate_num(z2)
+	result += calculate_num(z1) * 1000
 else:
-	x = s.split()
-	result = calculate_num(x)
+	z2 = s.split()
+
+result += calculate_num(z2)
 	
 print(result)
 
