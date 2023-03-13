@@ -1,46 +1,7 @@
 
-def calculate_num(q):
-	res = 0
-	lst1 = ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять']
-	lst2 = ['', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать',
-	        'восемнадцать', 'девятнадцать']
-	lst3 = ['', 'десять', 'двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят',
-	        'девяносто']
-	lst4 = ['', 'сто', 'двести', 'триста', 'четыреста', 'пятьсот', 'шестьсот', 'семьсот', 'восемьсот', 'девятьсот']
-	for el in q:
-		if el in lst3:
-			res += lst3.index(el) * 10
-		elif el in lst1:
-			res += lst1.index(el)
-		elif el in lst4:
-			res += lst4.index(el) * 100
-		elif el in lst2:
-			res += lst2.index(el) + 10
-	
-	return res if res else 1
-
-
-s = 'двадцать три тысячи девятьсот девятнадцать'
-s = 'двести сорок шесть'
-s = 'две тысячи девятнадцать'
-s = 'тысяча три'
-result = 0
-
-if 'тысяч' in s:
-	if 'одна' in s:
-		s = s.replace('одна', 'один')
-	elif 'две' in s:
-		s = s.replace('две', 'два')
-	x = s.split('тысяч')
-	z1 = x[0].split()
-	z2 = x[1].split()
-	result += calculate_num(z1) * 1000
-else:
-	z2 = s.split()
-
-result += calculate_num(z2)
-	
-print(result)
-
-
-
+n = 70304
+n_lst = list(str(n))
+print(n_lst)
+for i in range(len(n_lst)):
+	el = n_lst[i]
+	print(el + ('0' * len(n_lst[i + 1:])))
