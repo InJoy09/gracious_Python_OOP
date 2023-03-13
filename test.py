@@ -17,13 +17,13 @@ def calculate_num(q):
 		elif el in lst2:
 			res += lst2.index(el) + 10
 	
-	return res
+	return res if res else 1
 
 
 s = 'двадцать три тысячи девятьсот девятнадцать'
 s = 'двести сорок шесть'
-s = 'одна тысяча три'
 s = 'две тысячи девятнадцать'
+s = 'тысяча три'
 result = 0
 
 if 'тысяч' in s:
